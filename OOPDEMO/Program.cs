@@ -14,7 +14,6 @@ namespace OOPDEMO
         }
         static void PCOlustur()
         {
-            _bs = new BilgisayarKasasi();
             Console.Write("Ana Kart: ");
             string anaKart = Console.ReadLine();
             Console.Write("(Ekran Kartı Tipi (" + EkranKartiTipleri.AMD + ": " + (int)EkranKartiTipleri.AMD + ", "
@@ -39,7 +38,7 @@ namespace OOPDEMO
             Console.Write("RAM Boyutu Giriniz (MHZ): ");
             short ram = short.Parse(Console.ReadLine());
             Console.Write("Alım Tarihi Giriniz (dd.mm.yyyy): ");
-            DateTime alimTarihi = DateTime.Parse(Console.ReadLine(), new CultureInfo("en-US"));
+            DateTime alimTarihi = DateTime.Parse(Console.ReadLine(), new CultureInfo("tr-TR"));
             string kasa = Console.ReadLine();
 
             _bs = new BilgisayarKasasi()
@@ -72,7 +71,7 @@ namespace OOPDEMO
                 $"HDD: {_bs.HDD} MB \n" +
                 $"SSD: {_bs.SSD} MB \n" +
                 $"RAM: {_bs.Ram} MHZ \n" +
-                $"Alım Tarihi {_bs.AlimTarihi.ToString("gg.aa.yyyy", new CultureInfo("en-US"))} : \n" +
+                $"Alım Tarihi {_bs.AlimTarihi.ToString("dd.MM.yyyy", new CultureInfo("tr-TR"))}: \n" +
                 $"İşlemci Tipi: {_bs.IslemciTipi}({(int)_bs.IslemciTipi}) \n" +
                 $"Ekran Kartı Tipi: {_bs.EkranKartiTipi}({(int)_bs.EkranKartiTipi}) ");
 
